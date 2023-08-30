@@ -7,15 +7,15 @@ const generateAgainButton = document.getElementById('generateAgain');
 
 const players = [
     { name: 'Henoch', value: 8 },
-    { name: 'Jacqueline', value: 6 },
-    { name: 'John', value: 7 },
-    { name: 'Maarten', value: 7 },
-    { name: 'Mathew', value: 6 },
-    { name: 'Mesach', value: 7 },
+    { name: 'Jacqueline', value: 7 },
+    { name: 'John', value: 7.5 },
+    { name: 'Maarten', value: 7.5 },
+    { name: 'Mathew', value: 7.5 },
+    { name: 'Mesach', value: 7.5 },
     { name: 'Ruben', value: 9 },
     { name: 'Samuel', value: 8 },
     { name: 'Tom B', value: 8 },
-    { name: 'Tom P', value: 8 },
+    { name: 'Tom P', value: 7.5 },
 ];
 
 const selectedPlayers = new Set();

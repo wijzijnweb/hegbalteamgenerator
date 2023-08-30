@@ -61,7 +61,7 @@ generateAgainButton.addEventListener('click', () => {
 
 function formTeams() {
     const selectedPlayersArray = Array.from(selectedPlayers);
-    const sortedPlayers = selectedPlayersArray.slice().sort((a, b) => b.value - a.value);
+    const sortedPlayers = selectedPlayersArray.slice().sort((a, b) => a.value - b.value);
 
     let team1Players = [];
     let team2Players = [];
@@ -77,13 +77,6 @@ function formTeams() {
             team2TotalValue += player.value;
         }
     });
-
-    // Ensure the team with fewer players has the lowest average score
-    if (team1Players.length < team2Players.length) {
-        const temp = team1Players;
-        team1Players = team2Players;
-        team2Players = temp;
-    }
 
     displayTeams(team1Players, team2Players);
 }

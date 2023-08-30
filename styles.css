@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -41,3 +41,58 @@ li {
     margin-top: 10px;
     border-radius: 5px;
 }
+
+.button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #1E88E5;
+}
+
+.player-button,
+.participant-name {
+    font-size: 16px;
+}
+
+.player-button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.player-button.selected {
+    background-color: #1E88E5;
+}
+
+
+#formTeams, #generateAgain {
+    background-color: #FF0000; /* Felrode achtergrond */
+    color: white; /* Witte tekst */
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold; /* Maak de tekst bold */
+    border: none;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Voeg witruimte toe aan de bovenkant */
+
+}
+
+#formTeams:hover, #generateAgain:hover {
+    background-color: #FF3333; /* Lichtere rode kleur bij hover */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');

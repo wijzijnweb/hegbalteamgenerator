@@ -78,8 +78,8 @@ function formTeams() {
         }
     });
 
-    // Ensure the team with fewer players has the highest average score
-    if (team1Players.length > team2Players.length) {
+    // Ensure the team with fewer players has the lowest average score
+    if (team1Players.length < team2Players.length) {
         const temp = team1Players;
         team1Players = team2Players;
         team2Players = temp;

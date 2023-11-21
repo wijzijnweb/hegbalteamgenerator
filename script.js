@@ -32,6 +32,8 @@ const players = [
     { name: 'Tim', value: 8 },
     { name: 'Timo', value: 8 },
     { name: 'Tom', value: 8 },
+    { name: 'Jorn', value: 8 },
+    { name: 'Jordie', value: 8 },
 ];
 
 const selectedPlayers = new Set();

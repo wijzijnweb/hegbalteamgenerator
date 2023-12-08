@@ -1,4 +1,5 @@
-const playerList = document.getElementById('players');
+const dieHardsList = document.getElementById('dieHards');
+const benchWarmersList = document.getElementById('benchWarmers');
 const participantsList = document.getElementById('participants');
 const team1 = document.getElementById('team1');
 const team2 = document.getElementById('team2');
@@ -34,11 +35,19 @@ const players = [
 
 const selectedPlayers = new Set();
 
-players.forEach(player => {
+const dieHards = [
+    'Henoch', 'Jaap', 'Laureen', 'Leander', 'Marc', 'Mark', 'Maud', 'Remco', 'Simon', 'Tim', 'Timo', 'Jorn', 'Jordie'
+];
+
+const benchWarmers = [
+    'Bart', 'Dick', 'Jan', 'Jasper', 'Jochem', 'Kevin', 'Koen', 'Luc', 'Pascal', 'Sander', 'Tom'
+];
+
+function addPlayerToList(player, list) {
     const button = document.createElement('button');
     button.textContent = player.name;
     button.classList.add('player-button');
-    playerList.appendChild(button);
+    list.appendChild(button);
 
     button.addEventListener('click', () => {
         if (!selectedPlayers.has(player)) {
@@ -63,6 +72,14 @@ players.forEach(player => {
             }
         }
     });
+}
+
+players.forEach(player => {
+    if (dieHards.includes(player.name)) {
+        addPlayerToList(player, dieHardsList);
+    } else if (benchWarmers.includes(player.name)) {
+        addPlayerToList(player, benchWarmersList);
+    }
 });
 
 formTeamsButton.addEventListener('click', () => {
@@ -72,6 +89,7 @@ formTeamsButton.addEventListener('click', () => {
 generateAgainButton.addEventListener('click', () => {
     generateRandomTeams();
 });
+
 
 function formTeams() {
     const selectedPlayersArray = Array.from(selectedPlayers);

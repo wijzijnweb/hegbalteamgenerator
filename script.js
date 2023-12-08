@@ -90,16 +90,20 @@ generateAgainButton.addEventListener('click', () => {
     generateRandomTeams();
 });
 
-
 function formTeams() {
+    // Eerst zorgen we dat we een lijst van geselecteerde spelers hebben
     const selectedPlayersArray = Array.from(selectedPlayers);
+
+    // We sorteren de spelers op hun waarde
     const sortedPlayers = selectedPlayersArray.slice().sort((a, b) => a.value - b.value);
 
+    // We bereiden de teams en hun totale waarden voor
     let team1Players = [];
     let team2Players = [];
     let team1TotalValue = 0;
     let team2TotalValue = 0;
 
+    // We verdelen de spelers over de teams
     sortedPlayers.forEach(player => {
         if (team1TotalValue <= team2TotalValue) {
             team1Players.push(player);
@@ -110,25 +114,33 @@ function formTeams() {
         }
     });
 
+    // We tonen de teams
     displayTeams(team1Players, team2Players);
 }
 
 function generateRandomTeams() {
+    // Eerst zorgen we dat we een lijst van geselecteerde spelers hebben
     const selectedPlayersArray = Array.from(selectedPlayers);
+
+    // We schudden de spelers willekeurig
     const shuffledPlayers = shuffleArray(selectedPlayersArray);
 
     let bestTeam1Players = [];
     let bestTeam2Players = [];
     let bestDifference = Infinity;
 
+    // We proberen 1000 verschillende combinaties
     for (let i = 0; i < 1000; i++) {
+        // We splitsen de spelers in twee teams
         const team1Players = shuffledPlayers.slice(0, shuffledPlayers.length / 2);
         const team2Players = shuffledPlayers.slice(shuffledPlayers.length / 2);
 
+        // We berekenen het verschil in gemiddelde waarde tussen de teams
         const team1Average = calculateAverage(team1Players);
         const team2Average = calculateAverage(team2Players);
         const currentDifference = Math.abs(team1Average - team2Average);
 
+        // We kijken of dit de beste combinatie tot nu toe is
         if (currentDifference < bestDifference &&
             team1Players.length - team2Players.length <= 1 &&
             team2Players.length - team1Players.length <= 1) {
@@ -137,18 +149,12 @@ function generateRandomTeams() {
             bestTeam2Players = team2Players;
         }
 
-        // Shuffle players for the next iteration
+        // We schudden de spelers voor de volgende poging
         shuffledPlayers.push(shuffledPlayers.shift());
     }
 
+    // We tonen de beste teams
     displayTeams(bestTeam1Players, bestTeam2Players);
-}
-
-function calculateTeamDifference(team1, team2) {
-    const team1Average = calculateAverage(team1);
-    const team2Average = calculateAverage(team2);
-
-    return Math.abs(team1Average - team2Average);
 }
 
 function shuffleArray(array) {

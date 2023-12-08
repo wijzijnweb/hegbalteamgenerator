@@ -201,4 +201,12 @@ function displayTeams(team1Players, team2Players) {
     const team2AverageElement = document.createElement('p');
     team2AverageElement.innerHTML = `<strong>Gemiddelde teamscore:</strong> ${team2Average.toFixed(2)}`;
     team2.appendChild(team2AverageElement);
+
+    const team1FieldElement = document.createElement('p');
+    team1FieldElement.textContent = 'Team Stoep';
+    team1.appendChild(team1FieldElement);
+
+    const team2FieldElement = document.createElement('p');
+    team2FieldElement.textContent = 'Team Zand';
+    team2.appendChild(team2FieldElement);
 }

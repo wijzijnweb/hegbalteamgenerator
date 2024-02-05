@@ -8,11 +8,10 @@ const generateAgainButton = document.getElementById('generateAgain');
 
 const players = [
     { name: 'Bart', value: 5 },
-    { name: 'Dick', value: 4 },
+    { name: 'Fannis', value: 4 },
     { name: 'Henoch', value: 5 },
     { name: 'Jaap', value: 4 },
     { name: 'Jan', value: 3 },
-    { name: 'Jasper', value: 3 },
     { name: 'Jochem', value: 3 },
     { name: 'Kevin', value: 4 },
     { name: 'Koen', value: 6 },
@@ -22,6 +21,7 @@ const players = [
     { name: 'Marc', value: 5 },
     { name: 'Mark', value: 5 },
     { name: 'Maud', value: 2 },
+    { name: 'Naser', value: 4 },
     { name: 'Pascal', value: 2 },
     { name: 'Remco', value: 3 },
     { name: 'Sander', value: 3 },
@@ -29,18 +29,17 @@ const players = [
     { name: 'Tim', value: 5 },
     { name: 'Timo', value: 3 },
     { name: 'Tom', value: 3 },
-    { name: 'Jorn', value: 3 },
     { name: 'Jordie', value: 2 },
 ];
 
 const selectedPlayers = new Set();
 
 const dieHards = [
-    'Henoch', 'Jaap', 'Laureen', 'Leander', 'Marc', 'Mark', 'Maud', 'Remco', 'Simon', 'Tim', 'Timo', 'Jorn', 'Jordie'
+    'Henoch', 'Jaap', 'Laureen', 'Leander', 'Marc', 'Mark', 'Maud', 'Remco', 'Simon', 'Tim', 'Timo', 'Jordie'
 ];
 
 const benchWarmers = [
-    'Bart', 'Dick', 'Jan', 'Jasper', 'Jochem', 'Kevin', 'Koen', 'Luc', 'Pascal', 'Sander', 'Tom'
+    'Bart', 'Jan', 'Jochem', 'Kevin', 'Koen', 'Luc', 'Pascal', 'Sander', 'Tom', 'Fannis', 'Naser'
 ];
 
 function addPlayerToList(player, list) {

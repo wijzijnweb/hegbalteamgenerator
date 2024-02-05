@@ -21,14 +21,14 @@ const players = [
     { name: 'Marc', value: 5 },
     { name: 'Mark', value: 5 },
     { name: 'Maud', value: 2 },
-    { name: 'Naser', value: 4 },
+    { name: 'Naser', value: 3 },
     { name: 'Pascal', value: 2 },
     { name: 'Remco', value: 3 },
     { name: 'Sander', value: 3 },
     { name: 'Simon', value: 6 },
     { name: 'Tim', value: 5 },
     { name: 'Timo', value: 3 },
-    { name: 'Tom', value: 3 },
+    { name: 'Tom', value: 4 },
     { name: 'Jordie', value: 2 },
 ];
 

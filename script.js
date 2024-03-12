@@ -19,6 +19,7 @@ const players = [
     { name: 'Leander', value: 2 },
     { name: 'Luc', value: 6 },
     { name: 'Marc', value: 5 },
+    { name: 'Marije', value: 2 },
     { name: 'Mark', value: 5 },
     { name: 'Maud', value: 2 },
     { name: 'Naser', value: 3 },
@@ -35,11 +36,11 @@ const players = [
 const selectedPlayers = new Set();
 
 const dieHards = [
-    'Henoch', 'Jaap', 'Laureen', 'Leander', 'Marc', 'Mark', 'Maud', 'Remco', 'Simon', 'Tim', 'Timo', 'Jordie'
+    'Henoch', 'Fannis', 'Laureen', 'Leander', 'Marc', 'Mark', 'Maud', 'Remco', 'Simon', 'Tim', 'Jordie', 'Naser'
 ];
 
 const benchWarmers = [
-    'Bart', 'Jan', 'Jochem', 'Kevin', 'Koen', 'Luc', 'Pascal', 'Sander', 'Tom', 'Fannis', 'Naser'
+    'Bart', 'Jaap', 'Jan', 'Jochem', 'Kevin', 'Koen', 'Luc', 'Marije', 'Pascal', 'Sander', 'Timo', 'Tom',
 ];
 
 function addPlayerToList(player, list) {

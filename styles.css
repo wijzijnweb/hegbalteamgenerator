@@ -1,26 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #1E3A8A;         /* Diep marineblauw */
+    --primary-light: #3B82F6;         /* Helder sportblauw */
+    --accent-color: #1E3A8A;          /* Grasgroen */
+    --danger-color: #EF4444;          /* Sportief rood */
+    --bg-color: #F0F4F8;              /* Lichtgrijs/wit */
+    --text-color: #1F2937;            /* Diep grijs */
+    --card-bg: #FFFFFF;
+    --border-color: #E5E7EB;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    --radius: 12px;
+    --transition: 0.2s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 header, main {
-    padding: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h1 {
+h1, p {
     text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 2px;
 }
 
 .player-list, .team-list {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
+    background: var(--card-bg);
+    border: 2px solid var(--primary-light);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
 }
 
 .player-list h2, .team-list h2 {
     margin-top: 0;
+    font-size: 1.6rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 ul {
@@ -29,70 +67,83 @@ ul {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 #team1, #team2 {
     display: inline-block;
-    width: 45%;
+    width: 48%;
     vertical-align: top;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid var(--primary-light);
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 20px;
 }
 
-.button {
-    background-color: #2196F3;
-    color: white;
+#team1 {
+    margin-right: 2%;
+}
+
+.button, .player-button, #formTeams, #clearSelection, #generateAgain {
+    font-size: 18px;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: var(--radius);
+    padding: 12px 24px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color var(--transition), transform var(--transition);
 }
 
-.button:hover {
-    background-color: #1E88E5;
-}
-
-.player-button,
-.participant-name {
-    font-size: 16px;
+.button:hover,
+.player-button:hover,
+#formTeams:hover,
+#clearSelection:hover,
+#generateAgain:hover {
+    transform: scale(1.05);
 }
 
 .player-button {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    background-color: #2196F3;
+    background-color: var(--primary-light);
     color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    margin: 6px;
+    display: inline-block;
 }
 
 .player-button.selected {
-    background-color: #1E88E5;
+    background-color: var(--primary-color);
 }
 
-
-#formTeams, #generateAgain {
-    background-color: #FF0000; /* Felrode achtergrond */
-    color: white; /* Witte tekst */
-    border-radius: 10px;
-    padding: 10px 20px;
+.participant-name {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    border-radius: var(--radius);
+    padding: 6px 12px;
+    margin: 6px;
     cursor: pointer;
-    font-weight: bold; /* Maak de tekst bold */
-    border: none;
-    transition: background-color 0.3s;
-    margin-top: 20px; /* Voeg witruimte toe aan de bovenkant */
-
+    font-weight: 600;
+    transition: background-color var(--transition);
 }
 
-#formTeams:hover, #generateAgain:hover {
-    background-color: #FF3333; /* Lichtere rode kleur bij hover */
+.participant-name:hover {
+    background-color: #16A34A;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+#formTeams,
+#clearSelection,
+#generateAgain {
+    background-color: var(--danger-color);
+    color: white;
+    margin-top: 20px;
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+
+#formTeams:hover,
+#clearSelection:hover,
+#generateAgain:hover {
+    background-color: #DC2626;
+}

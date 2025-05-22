@@ -314,7 +314,6 @@ li::before {
 .participant-name {
     display: inline-block;
     background: var(--primary-hegebal-light); /* Heldergroene achtergrond */
-    color: var(--text-dark); /* Donkere tekst */
     border-radius: var(--radius-round);
     padding: 10px 18px;
     margin: 8px;
